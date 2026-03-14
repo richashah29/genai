@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --calm-bg: #f0f9f4;
+  --calm-card: #dbf0e4;
+  --warm-accent: #ed7b22;
+  --text: #1a2e28;
+  --text-muted: #4a6b62;
+}
+
+body {
+  color: var(--text);
+  background: var(--calm-bg);
+  min-height: 100vh;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-calm-200/60 bg-white/80 shadow-sm backdrop-blur;
+  }
+  .btn-primary {
+    @apply rounded-xl bg-calm-500 px-4 py-2.5 font-medium text-white transition hover:bg-calm-600 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply rounded-xl border border-calm-300 bg-white px-4 py-2.5 font-medium text-calm-700 transition hover:bg-calm-50;
+  }
+}
